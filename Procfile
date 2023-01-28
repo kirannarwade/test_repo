@@ -1,1 +1,1 @@
-web: gunicorn Crudproject.wsgi --log-file -
+web: gunicorn kshopping.wsgi --log-file -
