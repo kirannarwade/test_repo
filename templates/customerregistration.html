@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Customer Registration{% endblock title %}
+{% block main-content %}
+<div class="container">
+ <div class="row my-3">
+  <div class="col-sm-6 offset-sm-3">
+   <h3>Customer Registration</h3>
+   <hr>
+
+   <form action="" method="post" novalidate class="shadow p-5">
+      {% csrf_token %}
+    <div class="mb-3">
+     <label for="inputEmail4" class="form-label">Username</label>
+     <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <div class="mb-3">
+     <label for="inputEmail4" class="form-label">Email</label>
+     <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="mb-3">
+     <label for="inputPassword1" class="form-label">Password</label>
+     <input type="password" class="form-control" id="pass1" name="pass1" required>
+    </div>
+    <div class="mb-3">
+     <label for="inputPassword2" class="form-label">Confirm Password</label>
+     <input type="password" class="form-control" id="pass2" name="pass2" required>
+    </div>
+    <div class="text">
+     <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+    <br>
+    <div class="text-center text-dark fw-bold"><small>Existing User ? <a href="/login"
+       class="text-danger">Login Now</a> </small></div>
+   
+   </form>
+  </div>
+ </div>
+</div>
+{% endblock main-content %}
